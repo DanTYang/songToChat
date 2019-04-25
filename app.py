@@ -8,8 +8,8 @@ from bson.json_util import dumps, loads
 import json
 
 app = Flask(__name__)
-app.secret_key= 'rutgersIsADeadMeme'
 app.debug = True
+app.secret_key= 'rutgersIsADeadMeme'
 SESSION_TYPE = 'redis'
 api = Api(app)
 class JSONEncoder(json.JSONEncoder):
