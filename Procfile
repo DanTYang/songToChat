@@ -1,1 +1,1 @@
-web: gunicorn songtoChat:app
+web: gunicorn run:app
