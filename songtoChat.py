@@ -9,6 +9,7 @@ import json
 
 app = Flask(__name__)
 app.secret_key= 'rutgersIsADeadMeme'
+app.debug = True
 SESSION_TYPE = 'redis'
 api = Api(app)
 class JSONEncoder(json.JSONEncoder):
@@ -100,7 +101,3 @@ api.add_resource(login,'/login')
 api.add_resource(register,'/register')
 api.add_resource(dashboard,'/dashboard/<email>')
 api.add_resource(dashboardChat,'/dashboard/<email>/<other_email>')
-
-
-if __name__ == '__main__':
-    app.run(debug=False)
